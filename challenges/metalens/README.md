@@ -1,0 +1,2 @@
+- `230307_raelch_*` solutions are the FEM-generated designs from the [photonics-opt-testbed](https://github.com/NanoComp/photonics-opt-testbed/tree/main/RGB_metalens), created by @raelch
+- `230803_mochen4_*` solutions are the meep-generated designs from the [photonics-opt-testbed](https://github.com/NanoComp/photonics-opt-testbed/tree/main/RGB_metalens), created by @mochen4

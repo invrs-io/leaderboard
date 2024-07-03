@@ -1,0 +1,2 @@
+- `230803_jiaqui-jiang_*` solutions are the RCWA-generated designs from the [photonics-opt-testbed](https://github.com/NanoComp/photonics-opt-testbed/tree/main/Metagrating3D), created by @jiaqui-jiang
+- `230803_oskooi_*` solutions are the meep-generated designs from the [photonics-opt-testbed](https://github.com/NanoComp/photonics-opt-testbed/tree/main/Metagrating3D), created by @oskooi

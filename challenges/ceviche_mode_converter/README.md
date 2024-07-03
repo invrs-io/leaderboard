@@ -1,0 +1,3 @@
+- `220608_mfschubert_*` solutions are generator+STE designs from the [photonics-opt-testbed](https://github.com/NanoComp/photonics-opt-testbed/tree/main/waveguide_mode_converter), created by @mfschubert
+- `230115_ianwilliamson_*` solutions are generator+STE designs from the [photonics-opt-testbed](https://github.com/NanoComp/photonics-opt-testbed/tree/main/waveguide_mode_converter), created by @ianwilliamson
+- `230214_oskooi_*` solutions are the meep designs from the [photonics-opt-testbed](https://github.com/NanoComp/photonics-opt-testbed/tree/main/waveguide_mode_converter), created by @oskooi
