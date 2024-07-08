@@ -1,0 +1,70 @@
+[project]
+
+name = "invrs_leaderboard"
+version = "v0.0.0"
+description = "Leaderboard for invrs-gym challenges"
+keywords = ["topology", "optimization", "inverse design"]
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+
+authors = [
+    {name = "Martin F. Schubert", email = "mfschubert@gmail.com"},
+]
+maintainers = [
+    {name = "Martin F. Schubert", email = "mfschubert@gmail.com"},
+]
+
+dependencies = [
+    "imageruler",
+    "invrs-gym",
+    "totypes",
+]
+
+[project.optional-dependencies]
+tests = [
+    "parameterized",
+    "pytest",
+    "pytest-cov",
+    "pytest-subtests",
+    "invrs-gym",
+    "invrs-opt",
+    "gitpython",
+]
+docs = [
+    "matplotlib",
+    "jupyter-book",
+    "sphinx-autodoc-typehints",
+    "sphinx-click",
+]
+dev = [
+    "bump-my-version",
+    "darglint",
+    "mypy",
+    "pre-commit",
+]
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+"invrs_gym" = [
+    "py.typed",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.mypy]
+follow_imports = "normal"
+
+[tool.isort]
+multi_line_output = 3
+line_length = 88
+include_trailing_comma = true
+
+[tool.pydocstyle]
+inherit = false
+convention = "google"

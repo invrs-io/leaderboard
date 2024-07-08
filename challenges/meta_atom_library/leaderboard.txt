@@ -1,0 +1,1 @@
+path=challenges/meta_atom_library/solutions/230503_chen_00.json, eval_metric=0.8296763495046918, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0
