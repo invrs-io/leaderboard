@@ -1,1 +1,1 @@
-path=challenges/photon_extractor/solutions/201218_chakravarthi.csv, eval_metric=11.278201167034577, minimum_width=1.0, minimum_spacing=1.0, binarization_degree=0.12
+path=challenges/photon_extractor/solutions/201218_chakravarthi_00.csv, eval_metric=11.278201167034577, minimum_width=1.0, minimum_spacing=1.0, binarization_degree=0.12
