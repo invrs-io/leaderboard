@@ -75,7 +75,7 @@ class VerifyLeaderboardTest(unittest.TestCase):
                 challenge_name=challenge_name,
                 solution_paths=[entry[utils.PATH] for entry in entries],
                 update_leaderboard=False,
-                print_results=False,
+                print_results=True,
             )
 
             for solution_path in evaluation_results.keys():

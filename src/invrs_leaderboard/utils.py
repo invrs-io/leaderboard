@@ -13,6 +13,7 @@ import jax
 import jax.numpy as jnp
 import numpy as onp
 from invrs_gym import challenges
+from invrs_gym.utils import metrics
 from totypes import json_utils, types
 
 # 64 bit mode ensures highest accuracy for evaluation results.
@@ -100,11 +101,13 @@ def evaluate_solutions_to_challenge(
         for solution_path, solution in solutions.items():
             eval_metric = float(eval_metric_fn(params=solution))
             minimum_width, minimum_spacing = compute_length_scale(solution)
+            binarization_degree = metrics.binarization_degree(params=solution)
             results = dict(
                 path=solution_path,
                 eval_metric=_try_float(eval_metric),
                 minimum_width=_try_float(minimum_width),
                 minimum_spacing=_try_float(minimum_spacing),
+                binarization_degree=_try_float(binarization_degree),
             )
             output_str = SEP.join([f"{key}={value}" for key, value in results.items()])
             evaluation_results[solution_path] = results
