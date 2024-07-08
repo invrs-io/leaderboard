@@ -4,7 +4,6 @@ Copyright (c) 2024 The INVRS-IO authors.
 """
 
 import functools
-import glob
 import tempfile
 import unittest
 
@@ -22,7 +21,7 @@ jax.config.update("jax_enable_x64", True)
 def _load_repo_leaderboard():
     """Loads the leaderboard from the main branch on github."""
     with tempfile.TemporaryDirectory() as temp_path:
-        repo_url = f"https://github.com/invrs-io/leaderboard.git"
+        repo_url = "https://github.com/invrs-io/leaderboard.git"
         git.Repo.clone_from(repo_url, temp_path, branch="main")
         return utils.load_leaderboard(base_path=temp_path)
 
