@@ -18,9 +18,6 @@ from totypes import json_utils, types
 
 from invrs_leaderboard import data
 
-# 64 bit mode ensures highest accuracy for evaluation results.
-jax.config.update("jax_enable_x64", True)
-
 PyTree = Any
 
 
@@ -69,7 +66,13 @@ def evaluate_solutions_to_challenge(
 
     Returns:
         A dict containing the evaluation results, with keys being the solution path.
+
+    Raises:
+        RuntimeError: If 64-bit jax is not enabled.
     """
+    if not jax.config.read("jax_enable_x64"):
+        raise RuntimeError("64-bit must be enabled for eval calculations.")
+
     for path in solution_paths:
         if not path.startswith(f"challenges/{challenge_name}/solutions/"):
             raise ValueError(
@@ -179,7 +182,7 @@ def compute_length_scale(params: Any) -> Tuple[Optional[int], Optional[int]]:
         if not is_density(leaf):
             continue
         arrays = leaf.array.reshape((-1,) + leaf.shape[-2:])
-        arrays = arrays > (leaf.lower_bound + leaf.lower_bound) / 2
+        arrays = arrays > (leaf.lower_bound + leaf.upper_bound) / 2
         for arr in arrays:
             width, spacing = imageruler.minimum_length_scale(
                 onp.asarray(arr), periodic=leaf.periodic
