@@ -18,7 +18,7 @@ PATH = "path"
 def leaderboard_dataframe(base_path: str = "") -> pd.DataFrame:
     """Return leaderboard data as a dataframe."""
     leaderboard = load_leaderboard(base_path=base_path)
-    df = pd.DataFrame.from_records(leaderboard.values())
+    df = pd.DataFrame.from_records(list(leaderboard.values()))
     df["challenge"] = df["path"].str.split("/").str[1]
     df["file"] = df["path"].str.split("/").str[-1]
     df["file_prefix"] = df["file"].str.split("_").str[:2].str.join("_")
