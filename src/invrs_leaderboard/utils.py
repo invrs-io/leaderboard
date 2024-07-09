@@ -18,9 +18,6 @@ from totypes import json_utils, types
 
 from invrs_leaderboard import data
 
-# 64 bit mode ensures highest accuracy for evaluation results.
-jax.config.update("jax_enable_x64", True)
-
 PyTree = Any
 
 
@@ -70,6 +67,9 @@ def evaluate_solutions_to_challenge(
     Returns:
         A dict containing the evaluation results, with keys being the solution path.
     """
+    if not jax.config.read("jax_enable_x64"):
+        raise RuntimeError("64-bit must be enabled for eval calculations.")
+
     for path in solution_paths:
         if not path.startswith(f"challenges/{challenge_name}/solutions/"):
             raise ValueError(
