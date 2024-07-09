@@ -18,6 +18,9 @@ maintainers = [
 dependencies = [
     "imageruler",
     "invrs-gym",
+    "jax",
+    "pandas",
+    "numpy",
     "totypes",
 ]
 
