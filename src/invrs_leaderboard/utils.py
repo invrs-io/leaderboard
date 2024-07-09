@@ -181,7 +181,9 @@ def compute_length_scale(params: Any) -> Tuple[Optional[int], Optional[int]]:
         arrays = leaf.array.reshape((-1,) + leaf.shape[-2:])
         arrays = arrays > (leaf.lower_bound + leaf.lower_bound) / 2
         for arr in arrays:
-            width, spacing = imageruler.minimum_length_scale(onp.asarray(arr))
+            width, spacing = imageruler.minimum_length_scale(
+                onp.asarray(arr), periodic=leaf.periodic
+            )
             min_width = width if min_width is None else min(width, min_width)
             min_spacing = spacing if min_spacing is None else min(spacing, min_spacing)
 
