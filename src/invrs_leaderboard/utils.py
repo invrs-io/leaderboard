@@ -179,7 +179,7 @@ def compute_length_scale(params: Any) -> Tuple[Optional[int], Optional[int]]:
         if not is_density(leaf):
             continue
         arrays = leaf.array.reshape((-1,) + leaf.shape[-2:])
-        arrays = arrays > (leaf.lower_bound + leaf.lower_bound) / 2
+        arrays = arrays > (leaf.lower_bound + leaf.upper_bound) / 2
         for arr in arrays:
             width, spacing = imageruler.minimum_length_scale(
                 onp.asarray(arr), periodic=leaf.periodic
