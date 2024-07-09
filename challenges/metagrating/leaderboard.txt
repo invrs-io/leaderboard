@@ -1,5 +1,5 @@
 path=challenges/metagrating/solutions/230803_jiaqui-jiang_00.csv, eval_metric=0.955985497924281, minimum_width=5.0, minimum_spacing=5.0, binarization_degree=1.0
 path=challenges/metagrating/solutions/230803_jiaqui-jiang_01.csv, eval_metric=0.9352761580405694, minimum_width=5.0, minimum_spacing=1.0, binarization_degree=1.0
 path=challenges/metagrating/solutions/230803_jiaqui-jiang_02.csv, eval_metric=0.9497323504720799, minimum_width=5.0, minimum_spacing=8.0, binarization_degree=1.0
-path=challenges/metagrating/solutions/230803_oskooi_00.csv, eval_metric=0.9124907066625562, minimum_width=7.0, minimum_spacing=6.0, binarization_degree=1.0
+path=challenges/metagrating/solutions/230803_oskooi_00.csv, eval_metric=0.9124907066625562, minimum_width=4.0, minimum_spacing=6.0, binarization_degree=1.0
 path=challenges/metagrating/solutions/230803_oskooi_01.csv, eval_metric=0.8299873328887453, minimum_width=7.0, minimum_spacing=3.0, binarization_degree=1.0
