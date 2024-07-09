@@ -1,6 +1,6 @@
 # leaderboard
 
-The leaderboard repo tracks solutions to [invrs-gym](https://github.com/invrs-io/gym) challenges.
+The leaderboard repo tracks solutions to [invrs-gym](https://github.com/invrs-io/gym) challenges. The evaluation metrics include the `eval_metric` scalar associated with each challenge, and the minimum width and spacing measured using the [imageruler](https://github.com/NanoComp/imageruler) algorithm.
 
 Solutions are the `params` which are passed to the `response` method of the component associated with a gym challenge. They can be saved to json format by,
 
@@ -12,7 +12,7 @@ with open("my_solution.json", "w") as f:
   f.write(serialized)
 ```
 
-The evaluation metrics include the `eval_metric` scalar associated with each challenge, and the minimum width and spacing measured using the [imageruler](https://github.com/NanoComp/imageruler) algorithm.
+Solutions can also be provided as csv files.
 
 ## How to contribute your solutions
 
