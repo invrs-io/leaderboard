@@ -1,0 +1,14 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: readme
+parts:
+  - caption: Challenges
+    chapters:
+    - file: notebooks/ceviche_challenges
+    - file: notebooks/diffractive_splitter
+    - file: notebooks/meta_atom_library
+    - file: notebooks/metagrating
+    - file: notebooks/metalens
+    - file: notebooks/photon_extractor

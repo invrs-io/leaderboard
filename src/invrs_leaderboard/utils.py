@@ -16,13 +16,12 @@ from invrs_gym import challenges
 from invrs_gym.utils import metrics
 from totypes import json_utils, types
 
+from invrs_leaderboard import data
+
 # 64 bit mode ensures highest accuracy for evaluation results.
 jax.config.update("jax_enable_x64", True)
 
 PyTree = Any
-
-SEP = ", "
-PATH = "path"
 
 
 def update_leaderboard_with_new_solutions() -> None:
@@ -104,12 +103,14 @@ def evaluate_solutions_to_challenge(
             binarization_degree = metrics.binarization_degree(params=solution)
             results = dict(
                 path=solution_path,
-                eval_metric=_try_float(eval_metric),
-                minimum_width=_try_float(minimum_width),
-                minimum_spacing=_try_float(minimum_spacing),
-                binarization_degree=_try_float(binarization_degree),
+                eval_metric=data.try_float(eval_metric),
+                minimum_width=data.try_float(minimum_width),
+                minimum_spacing=data.try_float(minimum_spacing),
+                binarization_degree=data.try_float(binarization_degree),
             )
-            output_str = SEP.join([f"{key}={value}" for key, value in results.items()])
+            output_str = data.SEP.join(
+                [f"{key}={value}" for key, value in results.items()]
+            )
             evaluation_results[solution_path] = results
             if print_results:
                 print(output_str)
@@ -124,7 +125,7 @@ def evaluate_solutions_to_challenge(
 def get_new_solution_paths() -> List[str]:
     """Returns paths to new solutions for all challenges."""
     solution_paths = get_solution_paths()
-    leaderboard_paths = [entry[PATH] for entry in load_leaderboard().values()]
+    leaderboard_paths = [entry[data.PATH] for entry in data.load_leaderboard().values()]
     return [path for path in solution_paths if path not in leaderboard_paths]
 
 
@@ -157,54 +158,12 @@ def load_solution(path: str, example_solution: PyTree) -> PyTree:
     return solution
 
 
-def load_leaderboard(base_path: str = "") -> Dict[str, Any]:
-    """Load leaderboard data for the given `base_path`."""
-    base_path = _fix_base_path(base_path)
-    leaderboard_paths = glob.glob(f"{base_path}challenges/*/leaderboard.txt")
-    leaderboard = {}
-
-    for path in leaderboard_paths:
-        with open(path) as f:
-            leaderboard_data = f.read().strip()
-        if not leaderboard_data:
-            continue
-        lines = leaderboard_data.split("\n")
-        for line in lines:
-            entry_dict = {}
-            for d in line.split(SEP):
-                key, value = d.split("=")
-                entry_dict[key] = _try_float(value)
-            solution_path = entry_dict[PATH]
-            if solution_path in leaderboard:
-                raise ValueError(
-                    f"Found duplicate entry in leaderboard: {solution_path}"
-                )
-            leaderboard[solution_path] = entry_dict
-
-    return leaderboard
-
-
 def get_solution_paths(base_path: str = "") -> List[str]:
     """Return the filenames for solutions for the given `base_path`."""
-    base_path = _fix_base_path(base_path)
+    base_path = data.fix_base_path(base_path)
     solution_paths = glob.glob(f"{base_path}challenges/*/solutions/*.csv")
     solution_paths += glob.glob(f"{base_path}challenges/*/solutions/*.json")
     return [path[len(base_path) :] for path in solution_paths]
-
-
-def _fix_base_path(base_path: str) -> str:
-    """Prepend the base path, if it is not empty."""
-    if not base_path or base_path.endswith("/"):
-        return base_path
-    return f"{base_path}/"
-
-
-def _try_float(value: Any) -> Any:
-    """Convert `value` to float if possible."""
-    try:
-        return float(value)
-    except ValueError:
-        return value
 
 
 def is_density(leaf: Any) -> bool:

@@ -32,7 +32,7 @@ tests = [
     "gitpython",
 ]
 docs = [
-    "matplotlib",
+    "plotly",
     "jupyter-book",
     "sphinx-autodoc-typehints",
     "sphinx-click",
