@@ -66,6 +66,9 @@ def evaluate_solutions_to_challenge(
 
     Returns:
         A dict containing the evaluation results, with keys being the solution path.
+
+    Raises:
+        RuntimeError: If 64-bit jax is not enabled.
     """
     if not jax.config.read("jax_enable_x64"):
         raise RuntimeError("64-bit must be enabled for eval calculations.")
