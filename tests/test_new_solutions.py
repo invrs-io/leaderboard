@@ -12,7 +12,7 @@ import jax
 import numpy as onp
 from invrs_gym import challenges
 
-from invrs_leaderboard import utils
+from invrs_leaderboard import data, utils
 
 jax.config.update("jax_enable_x64", True)
 
@@ -23,12 +23,12 @@ def _load_repo_leaderboard():
     with tempfile.TemporaryDirectory() as temp_path:
         repo_url = "https://github.com/invrs-io/leaderboard.git"
         git.Repo.clone_from(repo_url, temp_path, branch="main")
-        return utils.load_leaderboard(base_path=temp_path)
+        return data.load_leaderboard(base_path=temp_path)
 
 
 def _get_new_leaderboard_entries():
     """Get all new or updated leaderboard entries."""
-    local_leaderboard = utils.load_leaderboard()
+    local_leaderboard = data.load_leaderboard()
     repo_leaderboard = _load_repo_leaderboard()
     new_entries = {}
     for key in local_leaderboard.keys():
@@ -54,7 +54,7 @@ class VerifyLeaderboardTest(unittest.TestCase):
         """Check that all solution files have corresponding leaderboard entries."""
         solution_paths = utils.get_solution_paths()
         leaderboard_paths = [
-            entry[utils.PATH] for entry in utils.load_leaderboard().values()
+            entry[data.PATH] for entry in data.load_leaderboard().values()
         ]
         self.assertEqual(len(solution_paths), len(leaderboard_paths))
         self.assertSetEqual(set(leaderboard_paths), set(solution_paths))
@@ -64,7 +64,7 @@ class VerifyLeaderboardTest(unittest.TestCase):
 
         new_leaderboard_entries_by_challenge = {}
         for entry in new_leaderboard_entries.values():
-            challenge_name = entry[utils.PATH].split("/")[1]
+            challenge_name = entry[data.PATH].split("/")[1]
             assert challenge_name in challenges.BY_NAME.keys()
             if challenge_name not in new_leaderboard_entries_by_challenge:
                 new_leaderboard_entries_by_challenge[challenge_name] = []
@@ -73,7 +73,7 @@ class VerifyLeaderboardTest(unittest.TestCase):
         for challenge_name, entries in new_leaderboard_entries_by_challenge.items():
             evaluation_results = utils.evaluate_solutions_to_challenge(
                 challenge_name=challenge_name,
-                solution_paths=[entry[utils.PATH] for entry in entries],
+                solution_paths=[entry[data.PATH] for entry in entries],
                 update_leaderboard=False,
                 print_results=True,
             )
@@ -83,8 +83,8 @@ class VerifyLeaderboardTest(unittest.TestCase):
                 expected = evaluation_results[solution_path]
                 for key in reported.keys():
                     with self.subTest(f"{solution_path=}/{key=}"):
-                        a = utils._try_float(reported[key])
-                        b = utils._try_float(expected[key])
+                        a = data.try_float(reported[key])
+                        b = data.try_float(expected[key])
                         if isinstance(a, float):
                             onp.testing.assert_allclose(a, b)
                         else:

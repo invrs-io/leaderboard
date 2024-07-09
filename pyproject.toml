@@ -18,6 +18,10 @@ maintainers = [
 dependencies = [
     "imageruler",
     "invrs-gym",
+    "jax",
+    "pandas",
+    "pandas-stubs",
+    "numpy",
     "totypes",
 ]
 
@@ -32,7 +36,7 @@ tests = [
     "gitpython",
 ]
 docs = [
-    "matplotlib",
+    "plotly",
     "jupyter-book",
     "sphinx-autodoc-typehints",
     "sphinx-click",
