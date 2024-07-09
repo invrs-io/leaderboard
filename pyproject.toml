@@ -20,6 +20,7 @@ dependencies = [
     "invrs-gym",
     "jax",
     "pandas",
+    "pandas-stubs",
     "numpy",
     "totypes",
 ]
