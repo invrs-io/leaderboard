@@ -20,4 +20,4 @@ The evaluation metrics include the `eval_metric` scalar associated with each cha
 - Add your solution to the appropriate directory, following the filename convention (e.g. `challenges/{CHALLENGE_NAME}/solutions/{YYMMDD}_{GITHUB_USERNAME}_{SOLUTION_ID}.json`)
 - Modify the `README.md` in the challenge directory to include your submission. Please link any publication or code that is relevant.
 - Run `python scripts/eval.py`, which will detect new designs and add them to the appropriate leaderboard files
-- Submit a PR for review
+- Submit a PR for review. A github action will re-run the evaluation of your designs and ensure they match the leaderboard updates.
