@@ -1,11 +1,11 @@
 path=challenges/metalens/solutions/230307_raelch_070nm.csv, eval_metric=19.954546929533066, minimum_width=3.0, minimum_spacing=4.0, binarization_degree=1.0
 path=challenges/metalens/solutions/230307_raelch_123nm.csv, eval_metric=14.480992458602191, minimum_width=5.0, minimum_spacing=6.0, binarization_degree=1.0
-path=challenges/metalens/solutions/230307_raelch_209nm.csv, eval_metric=10.596359530855043, minimum_width=10.0, minimum_spacing=10.0, binarization_degree=1.0
+path=challenges/metalens/solutions/230307_raelch_209nm.csv, eval_metric=10.596359530855043, minimum_width=10.0, minimum_spacing=11.0, binarization_degree=1.0
 path=challenges/metalens/solutions/230307_raelch_256nm.csv, eval_metric=7.866672790621132, minimum_width=12.0, minimum_spacing=13.0, binarization_degree=1.0
 path=challenges/metalens/solutions/230803_mochen4_086nm.csv, eval_metric=14.517610312692547, minimum_width=4.0, minimum_spacing=4.0, binarization_degree=1.0
-path=challenges/metalens/solutions/230803_mochen4_117nm.csv, eval_metric=12.397051389536376, minimum_width=5.0, minimum_spacing=6.0, binarization_degree=1.0
+path=challenges/metalens/solutions/230803_mochen4_117nm.csv, eval_metric=12.397051389536376, minimum_width=5.0, minimum_spacing=7.0, binarization_degree=1.0
 path=challenges/metalens/solutions/230803_mochen4_180nm.csv, eval_metric=12.081221354444246, minimum_width=7.0, minimum_spacing=8.0, binarization_degree=1.0
-path=challenges/metalens/solutions/230803_mochen4_242nm.csv, eval_metric=10.123194831328318, minimum_width=9.0, minimum_spacing=13.0, binarization_degree=1.0
+path=challenges/metalens/solutions/230803_mochen4_242nm.csv, eval_metric=10.123194831328318, minimum_width=10.0, minimum_spacing=13.0, binarization_degree=1.0
 path=challenges/metalens/solutions/240709_mfschubert_24fa46923a2110f16bbb9e9ce2f86da4f4434a9d23e597c79109f657e37eb11f.csv, eval_metric=13.242068608528374, minimum_width=7.0, minimum_spacing=7.0, binarization_degree=1.0
 path=challenges/metalens/solutions/240709_mfschubert_2b839ac48f77ac3fa9730c66ffed1f325833df4544a1b5f11beda392a0ad7438.csv, eval_metric=18.800529420963034, minimum_width=5.0, minimum_spacing=5.0, binarization_degree=1.0
 path=challenges/metalens/solutions/240709_mfschubert_3e8e8a9ca76296ecb6fbe3a0e345d284d18c1df095a8b749ea49b01174ed8e80.csv, eval_metric=15.246126404169004, minimum_width=7.0, minimum_spacing=7.0, binarization_degree=1.0
