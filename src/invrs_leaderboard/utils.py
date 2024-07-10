@@ -13,10 +13,9 @@ import jax
 import jax.numpy as jnp
 import numpy as onp
 from invrs_gym import challenges
-from invrs_gym.challenges.diffract import splitter_challenge, metagrating_challenge
-from invrs_gym.challenges.metalens import challenge as metalens_challenge
-from invrs_gym.challenges.extractor import challenge as extractor_challenge
+from invrs_gym.challenges.diffract import metagrating_challenge, splitter_challenge
 from invrs_gym.challenges.library import challenge as library_challenge
+from invrs_gym.challenges.metalens import challenge as metalens_challenge
 from invrs_gym.utils import metrics
 from totypes import json_utils, types
 
@@ -47,10 +46,6 @@ OVERRIDE_SIM_PARAMS_BY_CHALLENGE = {
         metalens_challenge.METALENS_SIM_PARAMS,
         approximate_num_terms=400,
         num_layers=30,
-    ),
-    "photon_extractor": dataclasses.replace(
-        extractor_challenge.EXTRACTOR_SIM_PARAMS,
-        approximate_num_terms=1400,
     ),
 }
 

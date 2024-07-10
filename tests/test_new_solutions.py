@@ -4,6 +4,7 @@ Copyright (c) 2024 The INVRS-IO authors.
 """
 
 import functools
+import pytest
 import tempfile
 import unittest
 
@@ -92,29 +93,38 @@ class VerifyLeaderboardTest(unittest.TestCase):
                         else:
                             self.assertEqual(a, b)
 
+    @pytest.mark.slow
     def test_diffractive_splitter(self):
         self._test_new_submissions_have_correct_metrics("diffractive_splitter")
 
+    @pytest.mark.slow
     def test_ceviche_beam_splitter(self):
         self._test_new_submissions_have_correct_metrics("ceviche_beam_splitter")
 
+    @pytest.mark.slow
     def test_ceviche_mode_converter(self):
         self._test_new_submissions_have_correct_metrics("ceviche_mode_converter")
 
+    @pytest.mark.slow
     def test_ceviche_waveguide_bend(self):
         self._test_new_submissions_have_correct_metrics("ceviche_waveguide_bend")
 
+    @pytest.mark.slow
     def test_ceviche_wdm(self):
         self._test_new_submissions_have_correct_metrics("ceviche_wdm")
 
+    @pytest.mark.slow
     def test_meta_atom_library(self):
         self._test_new_submissions_have_correct_metrics("meta_atom_library")
 
+    @pytest.mark.slow
     def test_metagrating(self):
         self._test_new_submissions_have_correct_metrics("metagrating")
 
+    @pytest.mark.slow
     def test_metalens(self):
         self._test_new_submissions_have_correct_metrics("metalens")
 
+    @pytest.mark.slow
     def test_photon_extractor(self):
         self._test_new_submissions_have_correct_metrics("photon_extractor")
