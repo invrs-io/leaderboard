@@ -50,7 +50,7 @@ OVERRIDE_SIM_PARAMS_BY_CHALLENGE = {
     ),
     "photon_extractor": dataclasses.replace(
         extractor_challenge.EXTRACTOR_SIM_PARAMS,
-        approximate_num_terms=1600,
+        approximate_num_terms=1400,
     ),
 }
 

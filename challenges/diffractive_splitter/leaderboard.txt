@@ -1,3 +1,3 @@
-path=challenges/diffractive_splitter/solutions/230901_lighttrans_00.csv, eval_metric=0.17453118800556092, minimum_width=2.0, minimum_spacing=2.0, binarization_degree=1.0
-path=challenges/diffractive_splitter/solutions/230901_lighttrans_01.csv, eval_metric=0.3108108356234787, minimum_width=2.0, minimum_spacing=2.0, binarization_degree=1.0
+path=challenges/diffractive_splitter/solutions/230901_lighttrans_00.csv, eval_metric=0.17453118800556092, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0
+path=challenges/diffractive_splitter/solutions/230901_lighttrans_01.csv, eval_metric=0.3108108356234787, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0
 path=challenges/diffractive_splitter/solutions/230901_lighttrans_02.csv, eval_metric=0.3810322479161168, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0

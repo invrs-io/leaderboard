@@ -146,7 +146,7 @@ jobs:
       - name: Run Python tests
         run: |
           pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_all_solutions_on_leaderboard
-          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_waveguide_bend
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_waveguide_bend
 
   ceviche_wdm_leaderboard:
     runs-on: ubuntu-latest
