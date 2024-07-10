@@ -56,7 +56,7 @@ jobs:
           darglint src --strictness=short --ignore-raise=ValueError
           darglint scripts --strictness=short --ignore-raise=ValueError
 
-  tests:
+  diffractive_splitter_leaderboard:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -76,4 +76,189 @@ jobs:
 
       - name: Run Python tests
         run: |
-          pytest --cov=invrs_leaderboard tests
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_all_solutions_on_leaderboard
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_diffractive_splitter
+
+  ceviche_beam_splitter_leaderboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_all_solutions_on_leaderboard
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_beam_splitter
+
+  ceviche_mode_converter_leaderboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_all_solutions_on_leaderboard
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_mode_converter
+
+  ceviche_waveguide_bend_leaderboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_all_solutions_on_leaderboard
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_waveguide_bend
+
+  ceviche_wdm_leaderboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_all_solutions_on_leaderboard
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_wdm
+
+  meta_atom_library_leaderboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_all_solutions_on_leaderboard
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_meta_atom_library
+
+  metagrating_leaderboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_all_solutions_on_leaderboard
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_metagrating
+
+  metalens_leaderboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_all_solutions_on_leaderboard
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_metalens
+
+  photon_extractor_leaderboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_all_solutions_on_leaderboard
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_photon_extractor
