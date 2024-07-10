@@ -44,7 +44,7 @@ OVERRIDE_SIM_PARAMS_BY_CHALLENGE = {
     ),
     "metalens": dataclasses.replace(
         metalens_challenge.METALENS_SIM_PARAMS,
-        approximate_num_terms=400,
+        approximate_num_terms=340,
         num_layers=30,
     ),
 }
