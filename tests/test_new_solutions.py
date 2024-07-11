@@ -4,6 +4,7 @@ Copyright (c) 2024 The INVRS-IO authors.
 """
 
 import functools
+import pytest
 import tempfile
 import unittest
 
@@ -59,12 +60,14 @@ class VerifyLeaderboardTest(unittest.TestCase):
         self.assertEqual(len(solution_paths), len(leaderboard_paths))
         self.assertSetEqual(set(leaderboard_paths), set(solution_paths))
 
-    def test_new_submissions_have_correct_metrics(self):
+    def _test_new_submissions_have_correct_metrics(self, challenge_to_check):
         new_leaderboard_entries = _get_new_leaderboard_entries()
 
         new_leaderboard_entries_by_challenge = {}
         for entry in new_leaderboard_entries.values():
             challenge_name = entry[data.PATH].split("/")[1]
+            if challenge_name != challenge_to_check:
+                continue
             assert challenge_name in challenges.BY_NAME.keys()
             if challenge_name not in new_leaderboard_entries_by_challenge:
                 new_leaderboard_entries_by_challenge[challenge_name] = []
@@ -89,3 +92,39 @@ class VerifyLeaderboardTest(unittest.TestCase):
                             onp.testing.assert_allclose(a, b)
                         else:
                             self.assertEqual(a, b)
+
+    @pytest.mark.slow
+    def test_diffractive_splitter(self):
+        self._test_new_submissions_have_correct_metrics("diffractive_splitter")
+
+    @pytest.mark.slow
+    def test_ceviche_beam_splitter(self):
+        self._test_new_submissions_have_correct_metrics("ceviche_beam_splitter")
+
+    @pytest.mark.slow
+    def test_ceviche_mode_converter(self):
+        self._test_new_submissions_have_correct_metrics("ceviche_mode_converter")
+
+    @pytest.mark.slow
+    def test_ceviche_waveguide_bend(self):
+        self._test_new_submissions_have_correct_metrics("ceviche_waveguide_bend")
+
+    @pytest.mark.slow
+    def test_ceviche_wdm(self):
+        self._test_new_submissions_have_correct_metrics("ceviche_wdm")
+
+    @pytest.mark.slow
+    def test_meta_atom_library(self):
+        self._test_new_submissions_have_correct_metrics("meta_atom_library")
+
+    @pytest.mark.slow
+    def test_metagrating(self):
+        self._test_new_submissions_have_correct_metrics("metagrating")
+
+    @pytest.mark.slow
+    def test_metalens(self):
+        self._test_new_submissions_have_correct_metrics("metalens")
+
+    @pytest.mark.slow
+    def test_photon_extractor(self):
+        self._test_new_submissions_have_correct_metrics("photon_extractor")

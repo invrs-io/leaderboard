@@ -1,1 +1,1 @@
-path=challenges/meta_atom_library/solutions/230503_chen_00.json, eval_metric=0.847395864002544, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0
+path=challenges/meta_atom_library/solutions/230503_chen_00.json, eval_metric=0.8355433455375822, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0

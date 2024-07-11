@@ -13,12 +13,41 @@ import jax
 import jax.numpy as jnp
 import numpy as onp
 from invrs_gym import challenges
+from invrs_gym.challenges.diffract import metagrating_challenge, splitter_challenge
+from invrs_gym.challenges.library import challenge as library_challenge
+from invrs_gym.challenges.metalens import challenge as metalens_challenge
 from invrs_gym.utils import metrics
 from totypes import json_utils, types
 
 from invrs_leaderboard import data
 
 PyTree = Any
+
+
+# Override the sim parameters for certain challenges. The default simulation params
+# for many challenges are a tradeoff between simulation cost and accuracy. For eval
+# purposes, we use settings that ensure greater accuracy. Note: if these values
+# change, leaderboards will be affected and must be regenerated!
+OVERRIDE_SIM_PARAMS_BY_CHALLENGE = {
+    "diffractive_splitter": dataclasses.replace(
+        splitter_challenge.DIFFRACTIVE_SPLITTER_SIM_PARAMS,
+        approximate_num_terms=1000,
+    ),
+    "metagrating": dataclasses.replace(
+        metagrating_challenge.METAGRATING_SIM_PARAMS,
+        approximate_num_terms=400,
+    ),
+    "meta_atom_library": dataclasses.replace(
+        library_challenge.LIBRARY_SIM_PARAMS,
+        approximate_num_terms=300,
+        wavelength=jnp.arange(0.45, 0.66, 0.02),
+    ),
+    "metalens": dataclasses.replace(
+        metalens_challenge.METALENS_SIM_PARAMS,
+        approximate_num_terms=340,
+        num_layers=30,
+    ),
+}
 
 
 def update_leaderboard_with_new_solutions() -> None:
@@ -85,7 +114,13 @@ def evaluate_solutions_to_challenge(
         with open(leaderboard_path, "w") as f:
             f.write("")
 
-    challenge = challenges.BY_NAME[challenge_name]()  # type: ignore[operator]
+    if challenge_name in OVERRIDE_SIM_PARAMS_BY_CHALLENGE:
+        sim_params = OVERRIDE_SIM_PARAMS_BY_CHALLENGE[challenge_name]
+        challenge = challenges.BY_NAME[challenge_name](  # type: ignore[operator]
+            sim_params=sim_params
+        )
+    else:
+        challenge = challenges.BY_NAME[challenge_name]()  # type: ignore[operator]
     example_solution = challenge.component.init(jax.random.PRNGKey(0))
 
     solutions = {}

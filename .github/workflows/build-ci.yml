@@ -75,5 +75,202 @@ jobs:
             pip install ".[tests,dev]"
 
       - name: Run Python tests
+        run: pytest
+
+  leaderboard_diffractive_splitter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
         run: |
-          pytest --cov=invrs_leaderboard tests
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_diffractive_splitter --runslow
+
+  leaderboard_ceviche_beam_splitter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_beam_splitter --runslow
+
+  leaderboard_ceviche_mode_converter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_mode_converter --runslow
+
+  leaderboard_ceviche_waveguide_bend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_waveguide_bend --runslow
+
+  leaderboard_ceviche_wdm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_wdm --runslow
+
+  leaderboard_meta_atom_library:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_meta_atom_library --runslow
+
+  leaderboard_metagrating:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_metagrating --runslow
+
+  leaderboard_metalens:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_metalens --runslow
+
+  leaderboard_photon_extractor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_photon_extractor --runslow
