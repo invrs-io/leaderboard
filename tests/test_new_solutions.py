@@ -94,8 +94,8 @@ class VerifyLeaderboardTest(unittest.TestCase):
                             self.assertEqual(a, b)
 
     @pytest.mark.slow
-    def test_diffractive_splitter(self):
-        self._test_new_submissions_have_correct_metrics("diffractive_splitter")
+    def test_bayer_sorter(self):
+        self._test_new_submissions_have_correct_metrics("bayer_sorter")
 
     @pytest.mark.slow
     def test_ceviche_beam_splitter(self):
@@ -112,6 +112,10 @@ class VerifyLeaderboardTest(unittest.TestCase):
     @pytest.mark.slow
     def test_ceviche_wdm(self):
         self._test_new_submissions_have_correct_metrics("ceviche_wdm")
+
+    @pytest.mark.slow
+    def test_diffractive_splitter(self):
+        self._test_new_submissions_have_correct_metrics("diffractive_splitter")
 
     @pytest.mark.slow
     def test_meta_atom_library(self):

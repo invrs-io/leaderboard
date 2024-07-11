@@ -13,6 +13,7 @@ import jax
 import jax.numpy as jnp
 import numpy as onp
 from invrs_gym import challenges
+from invrs_gym.challenges.bayer import challenge as bayer_challenge
 from invrs_gym.challenges.diffract import metagrating_challenge, splitter_challenge
 from invrs_gym.challenges.library import challenge as library_challenge
 from invrs_gym.challenges.metalens import challenge as metalens_challenge
@@ -29,6 +30,11 @@ PyTree = Any
 # purposes, we use settings that ensure greater accuracy. Note: if these values
 # change, leaderboards will be affected and must be regenerated!
 OVERRIDE_SIM_PARAMS_BY_CHALLENGE = {
+    "bayer_sorter": dataclasses.replace(
+        bayer_challenge.BAYER_SIM_PARAMS,
+        approximate_num_terms=1000,
+        wavelength=jnp.asarray([0.433, 0.467, 0.533, 0.567, 0.633, 0.667]),
+    ),
     "diffractive_splitter": dataclasses.replace(
         splitter_challenge.DIFFRACTIVE_SPLITTER_SIM_PARAMS,
         approximate_num_terms=1000,
