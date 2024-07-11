@@ -1,0 +1,1 @@
+path=challenges/bayer_sorter/solutions/220607_zou_00.csv, eval_metric=0.42892409584479074, minimum_width=9.0, minimum_spacing=3.0, binarization_degree=1.0

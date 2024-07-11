@@ -1,0 +1,1 @@
+- `220607_zou_*` solutions are extracted from Supplementary figure 2 of "[Pixel-level Bayer-type colour router based on metasurfaces](https://www.nature.com/articles/s41467-022-31019-7)" by X. Zou et al.

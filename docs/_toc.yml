@@ -6,6 +6,7 @@ root: readme
 parts:
   - caption: Challenges
     chapters:
+    - file: notebooks/bayer_sorter
     - file: notebooks/ceviche_challenges
     - file: notebooks/diffractive_splitter
     - file: notebooks/meta_atom_library
