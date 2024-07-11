@@ -1,1 +1,2 @@
 - `230503_chen_*` solutions are from "[Dispersion-engineered metasurfaces reaching broadband 90% relative diffraction efficiency](https://www.nature.com/articles/s41467-023-38185-2)" by Chen et al.
+- `240702_mfschubert_*` solutions were submitted by @mfschubert
