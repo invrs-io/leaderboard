@@ -1,7 +1,7 @@
 path=challenges/meta_atom_library/solutions/230503_chen_00.json, eval_metric=0.8355433455375822, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0
-path=challenges/meta_atom_library/solutions/240702_mfschubert_646b2f2f169a3d66c4c2615f64145d24bb239c948dfa2868b3aefc0a1d68815a.json, eval_metric=0.7744379378143219, minimum_width=12.0, minimum_spacing=12.0, binarization_degree=1.0
 path=challenges/meta_atom_library/solutions/230503_chen_supplementary_d1.json, eval_metric=0.7910947321082916, minimum_width=8.0, minimum_spacing=9.0, binarization_degree=1.0
 path=challenges/meta_atom_library/solutions/230503_chen_supplementary_d2.json, eval_metric=0.7853532144639538, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0
 path=challenges/meta_atom_library/solutions/230503_chen_supplementary_d5.json, eval_metric=0.8188037005322455, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0
 path=challenges/meta_atom_library/solutions/230503_chen_supplementary_d6.json, eval_metric=0.7952323783254759, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0
 path=challenges/meta_atom_library/solutions/230503_chen_supplementary_d7.json, eval_metric=0.7933221916137472, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0
+path=challenges/meta_atom_library/solutions/240702_mfschubert_646b2f2f169a3d66c4c2615f64145d24bb239c948dfa2868b3aefc0a1d68815a.json, eval_metric=0.7744379378143219, minimum_width=12.0, minimum_spacing=12.0, binarization_degree=1.0
