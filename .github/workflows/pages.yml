@@ -28,6 +28,9 @@ jobs:
 
       - name: docs
         run: |
+            git clone https://github.com/invrs-io/gym
+            mkdir docs/notebooks/gym
+            mv gym/docs/notebooks docs/notebooks/gym/
             python docs/run_first.py
             jb build docs
 
