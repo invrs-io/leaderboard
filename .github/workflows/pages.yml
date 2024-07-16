@@ -30,7 +30,8 @@ jobs:
         run: |
             git clone https://github.com/invrs-io/gym
             mkdir docs/notebooks/gym
-            mv gym/docs/notebooks docs/notebooks/gym/
+            mv gym/docs/notebooks/challenges/* docs/notebooks/challenges/
+            mv gym/reference_designs/ . -r
             python docs/run_first.py
             jb build docs
 

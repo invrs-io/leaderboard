@@ -11,20 +11,20 @@ parts:
     # These notebooks are copies of those in the invrs-gym repo. In the github
     # action, the gym repo is cloned and notebooks moved over.
     chapters:
-    - file: notebooks/gym/notebooks/bayer_sorter
-    - file: notebooks/gym/notebooks/ceviche_challenges
-    - file: notebooks/gym/notebooks/diffractive_splitter
-    - file: notebooks/gym/notebooks/meta_atom_library
-    - file: notebooks/gym/notebooks/metagrating
-    - file: notebooks/gym/notebooks/metalens
-    - file: notebooks/gym/notebooks/photon_extractor
+    - file: notebooks/challenges/bayer_sorter
+    - file: notebooks/challenges/ceviche_challenges
+    - file: notebooks/challenges/diffractive_splitter
+    - file: notebooks/challenges/meta_atom_library
+    - file: notebooks/challenges/metagrating
+    - file: notebooks/challenges/metalens
+    - file: notebooks/challenges/photon_extractor
 
   - caption: Leaderboards
     chapters:
-    - file: notebooks/bayer_sorter
-    - file: notebooks/ceviche_challenges
-    - file: notebooks/diffractive_splitter
-    - file: notebooks/meta_atom_library
-    - file: notebooks/metagrating
-    - file: notebooks/metalens
-    - file: notebooks/photon_extractor
+    - file: notebooks/leaderboards/bayer_sorter
+    - file: notebooks/leaderboards/ceviche_challenges
+    - file: notebooks/leaderboards/diffractive_splitter
+    - file: notebooks/leaderboards/meta_atom_library
+    - file: notebooks/leaderboards/metagrating
+    - file: notebooks/leaderboards/metalens
+    - file: notebooks/leaderboards/photon_extractor
