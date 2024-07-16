@@ -31,7 +31,7 @@ jobs:
             git clone https://github.com/invrs-io/gym
             mkdir docs/notebooks/challenges
             mv gym/docs/notebooks/challenges/* docs/notebooks/challenges/
-            mv gym/reference_designs/ . -r
+            mv gym/reference_designs/ .
             python docs/run_first.py
             jb build docs
 
