@@ -37,6 +37,7 @@ tests = [
 ]
 docs = [
     "plotly",
+    "scikit-image",
     "jupyter-book",
     "sphinx-autodoc-typehints",
     "sphinx-click",
