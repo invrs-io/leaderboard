@@ -29,7 +29,7 @@ jobs:
       - name: docs
         run: |
             git clone https://github.com/invrs-io/gym
-            mkdir docs/notebooks/gym
+            mkdir docs/notebooks/challenges
             mv gym/docs/notebooks/challenges/* docs/notebooks/challenges/
             mv gym/reference_designs/ . -r
             python docs/run_first.py
