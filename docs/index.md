@@ -8,6 +8,6 @@ High-quality, highly-manufacturable solutions to gym challenges can be of practi
 
 | ![Meta-atom library designs](/img/meta_atom_library_designs.png) |
 |:--:|
-| *Solutions to the [meta-atom library challenge](https://invrs-io.github.io/leaderboard/notebooks/meta_atom_library.html) from (a)-(c) “[Dispersion-engineered metasurfaces reaching broadband 90% relative diffraction efficiency](https://www.nature.com/articles/s41467-023-38185-2)” by Chen et al. and (d) submitted by @mfschubert. The right panel is a SEM image of a fabricated metagrating using design (a).* |
+| *Solutions to the [meta-atom library challenge](https://invrs-io.github.io/leaderboard/notebooks/challenges/meta_atom_library.html) from (a)-(c) “[Dispersion-engineered metasurfaces reaching broadband 90% relative diffraction efficiency](https://www.nature.com/articles/s41467-023-38185-2)” by Chen et al. and (d) submitted by @mfschubert. The right panel is a SEM image of a fabricated metagrating using design (a).* |
 
 Therefore, _algorithms_ which reliably obtain high-quality, manufacturable solutions to gym challenges are valuable. The joint purpose of the invrs-gym and leaderboard are to aid and accelerate the development of such algorithms.
