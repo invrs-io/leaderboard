@@ -1,1 +1,6 @@
 path=challenges/bayer_sorter/solutions/220607_zou_00.csv, eval_metric=0.42892409584479074, minimum_width=2.0, minimum_spacing=2.0, binarization_degree=1.0
+path=challenges/bayer_sorter/solutions/240325_mfschubert_02d89d3df06fee343a4fb01652e5f5d0cd72d2312d6eb4d422fa0ba469cf1277.json, eval_metric=0.5312138552012766, minimum_width=8.0, minimum_spacing=8.0, binarization_degree=1.0
+path=challenges/bayer_sorter/solutions/240325_mfschubert_49ca0bd2450f982c7980208fb1fd88222c3a28694e49d205e51acf107febb17d.json, eval_metric=0.5511046138785741, minimum_width=8.0, minimum_spacing=8.0, binarization_degree=1.0
+path=challenges/bayer_sorter/solutions/240325_mfschubert_7f7f450c030dd3e7fc0f92827c359d87215f8f69ef24377fceab5401c7274aa0.json, eval_metric=0.5168096008467347, minimum_width=8.0, minimum_spacing=8.0, binarization_degree=1.0
+path=challenges/bayer_sorter/solutions/240325_mfschubert_88ad8c74105c6cfe90baf8d7a738771108f60efa8b93087fade6c1f12dd74697.json, eval_metric=0.5105231978458824, minimum_width=8.0, minimum_spacing=8.0, binarization_degree=1.0
+path=challenges/bayer_sorter/solutions/240325_mfschubert_e94865d0f861604e209f0466c2c8b21e93b45b2a8219e7ef467a9718f097f5ce.json, eval_metric=0.5324770391274407, minimum_width=8.0, minimum_spacing=8.0, binarization_degree=1.0
