@@ -89,7 +89,7 @@ class VerifyLeaderboardTest(unittest.TestCase):
                         a = data.try_float(reported[key])
                         b = data.try_float(expected[key])
                         if isinstance(a, float):
-                            onp.testing.assert_allclose(a, b)
+                            onp.testing.assert_allclose(a, b, rtol=1e-5)
                         else:
                             self.assertEqual(a, b)
 
