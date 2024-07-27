@@ -1,1 +1,2 @@
 - `230901_lighttrans_*` solutions are taken from LightTrans [diffractive beamsplitter](https://www.lighttrans.com/fileadmin/shared/UseCases/Application_UC_Rigorous%20Analysis%20of%20Non-paraxial%20Diffractive%20Beam%20Splitter.pdf) example
+- `240413_mfschubert_*` solutions were submitted by @mfschubert.
