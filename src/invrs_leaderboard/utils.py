@@ -17,7 +17,6 @@ from invrs_gym.challenges.bayer import challenge as bayer_challenge
 from invrs_gym.challenges.diffract import metagrating_challenge, splitter_challenge
 from invrs_gym.challenges.library import challenge as library_challenge
 from invrs_gym.challenges.metalens import challenge as metalens_challenge
-from invrs_gym.utils import metrics
 from totypes import json_utils, types
 
 from invrs_leaderboard import data
@@ -137,21 +136,35 @@ def evaluate_solutions_to_challenge(
     with jax.default_device(jax.devices("cpu")[0]):
 
         @jax.jit
-        def eval_metric_fn(params):
-            response, _ = challenge.component.response(params)
-            return challenge.eval_metric(response)
+        def evaluation_fn(params):
+            response, aux = challenge.component.response(params)
+            metrics = challenge.metrics(response=response, params=params, aux=aux)
+            eval_metric = challenge.eval_metric(response)
+            return eval_metric, metrics
 
         for solution_path, solution in solutions.items():
-            eval_metric = float(eval_metric_fn(params=solution))
+            eval_metric, other_metrics = evaluation_fn(params=solution)
             minimum_width, minimum_spacing = compute_length_scale(solution)
-            binarization_degree = metrics.binarization_degree(params=solution)
-            results = dict(
-                path=solution_path,
-                eval_metric=data.try_float(eval_metric),
-                minimum_width=data.try_float(minimum_width),
-                minimum_spacing=data.try_float(minimum_spacing),
-                binarization_degree=data.try_float(binarization_degree),
-            )
+            results = {
+                "path": solution_path,
+                "eval_metric": float(eval_metric),
+                "minimum_width": float(minimum_width),
+                "minimum_spacing": float(minimum_spacing),
+            }
+            # Add all scalar metrics.
+            assert "path" not in other_metrics
+            assert "eval_metric" not in other_metrics
+            assert "minimum_width" not in other_metrics
+            assert "minimum_spacing" not in other_metrics
+            for key, value in other_metrics.items():
+                try:
+                    results[key] = float(value)
+                except ValueError:
+                    pass
+                except TypeError:
+                    pass
+
+            assert "binarization_degree" in results
             output_str = data.SEP.join(
                 [f"{key}={value}" for key, value in results.items()]
             )
