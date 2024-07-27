@@ -148,8 +148,8 @@ def evaluate_solutions_to_challenge(
             results = {
                 "path": solution_path,
                 "eval_metric": float(eval_metric),
-                "minimum_width": float(minimum_width),
-                "minimum_spacing": float(minimum_spacing),
+                "minimum_width": data.try_float(minimum_width),
+                "minimum_spacing": data.try_float(minimum_spacing),
             }
             # Add all scalar metrics.
             assert "path" not in other_metrics
