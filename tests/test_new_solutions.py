@@ -50,6 +50,11 @@ def _dicts_identical(a, b):
     return True
 
 
+# Use a tighter tolerance for evaluation metric.
+RTOL_EVAL_METRIC = 1e-5
+RTOL_OTHER = 1e-3
+
+
 class VerifyLeaderboardTest(unittest.TestCase):
     def test_all_solutions_on_leaderboard(self):
         """Check that all solution files have corresponding leaderboard entries."""
@@ -89,7 +94,10 @@ class VerifyLeaderboardTest(unittest.TestCase):
                         a = data.try_float(reported[key])
                         b = data.try_float(expected[key])
                         if isinstance(a, float):
-                            onp.testing.assert_allclose(a, b, rtol=1e-5)
+                            rtol = (
+                                RTOL_EVAL_METRIC if key == "eval_metric" else RTOL_OTHER
+                            )
+                            onp.testing.assert_allclose(a, b, rtol=rtol)
                         else:
                             self.assertEqual(a, b)
 
