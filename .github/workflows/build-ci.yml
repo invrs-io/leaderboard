@@ -97,7 +97,7 @@ jobs:
 
       - name: Run Python tests
         run: |
-          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_bayer_sorter --runslow
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_bayer_sorter --runslow -s
 
   leaderboard_diffractive_splitter:
     runs-on: ubuntu-latest
@@ -119,7 +119,7 @@ jobs:
 
       - name: Run Python tests
         run: |
-          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_diffractive_splitter --runslow
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_diffractive_splitter --runslow -s
 
   leaderboard_ceviche_beam_splitter:
     runs-on: ubuntu-latest
@@ -141,7 +141,7 @@ jobs:
 
       - name: Run Python tests
         run: |
-          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_beam_splitter --runslow
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_beam_splitter --runslow -s
 
   leaderboard_ceviche_mode_converter:
     runs-on: ubuntu-latest
@@ -163,7 +163,7 @@ jobs:
 
       - name: Run Python tests
         run: |
-          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_mode_converter --runslow
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_mode_converter --runslow -s
 
   leaderboard_ceviche_waveguide_bend:
     runs-on: ubuntu-latest
@@ -185,7 +185,7 @@ jobs:
 
       - name: Run Python tests
         run: |
-          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_waveguide_bend --runslow
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_waveguide_bend --runslow -s
 
   leaderboard_ceviche_wdm:
     runs-on: ubuntu-latest
@@ -207,7 +207,7 @@ jobs:
 
       - name: Run Python tests
         run: |
-          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_wdm --runslow
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_wdm --runslow -s
 
   leaderboard_meta_atom_library:
     runs-on: ubuntu-latest
@@ -229,7 +229,7 @@ jobs:
 
       - name: Run Python tests
         run: |
-          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_meta_atom_library --runslow
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_meta_atom_library --runslow -s
 
   leaderboard_metagrating:
     runs-on: ubuntu-latest
@@ -251,7 +251,7 @@ jobs:
 
       - name: Run Python tests
         run: |
-          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_metagrating --runslow
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_metagrating --runslow -s
 
   leaderboard_metalens:
     runs-on: ubuntu-latest
@@ -273,7 +273,7 @@ jobs:
 
       - name: Run Python tests
         run: |
-          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_metalens --runslow
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_metalens --runslow -s
 
   leaderboard_photon_extractor:
     runs-on: ubuntu-latest
@@ -295,4 +295,4 @@ jobs:
 
       - name: Run Python tests
         run: |
-          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_photon_extractor --runslow
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_photon_extractor --runslow -s
