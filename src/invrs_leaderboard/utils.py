@@ -142,7 +142,11 @@ def evaluate_solutions_to_challenge(
             eval_metric = challenge.eval_metric(response)
             return eval_metric, metrics
 
+        print("Solutions to be evaluated:")
+        for p in solution_paths:
+            print(f"  {p}")
         for solution_path, solution in solutions.items():
+            print(f"evaluating: {solution_path=}")
             eval_metric, other_metrics = evaluation_fn(params=solution)
             minimum_width, minimum_spacing = compute_length_scale(solution)
             results = {
