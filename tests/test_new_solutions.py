@@ -65,7 +65,11 @@ class VerifyLeaderboardTest(unittest.TestCase):
         self.assertEqual(len(solution_paths), len(leaderboard_paths))
         self.assertSetEqual(set(leaderboard_paths), set(solution_paths))
 
-    def _test_new_submissions_have_correct_metrics(self, challenge_to_check):
+    def _test_new_submissions_have_correct_metrics(
+        self,
+        challenge_to_check,
+        disable_jit=False,
+    ):
         new_leaderboard_entries = _get_new_leaderboard_entries()
 
         new_leaderboard_entries_by_challenge = {}
@@ -84,6 +88,7 @@ class VerifyLeaderboardTest(unittest.TestCase):
                 solution_paths=[entry[data.PATH] for entry in entries],
                 update_leaderboard=False,
                 print_results=True,
+                disable_jit=disable_jit,
             )
 
             for solution_path in evaluation_results.keys():
@@ -139,4 +144,6 @@ class VerifyLeaderboardTest(unittest.TestCase):
 
     @pytest.mark.slow
     def test_photon_extractor(self):
-        self._test_new_submissions_have_correct_metrics("photon_extractor")
+        self._test_new_submissions_have_correct_metrics(
+            "photon_extractor", disable_jit=True
+        )
