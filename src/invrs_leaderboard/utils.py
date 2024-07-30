@@ -84,6 +84,7 @@ def evaluate_solutions_to_challenge(
     solution_paths: Sequence[str],
     update_leaderboard: bool,
     print_results: bool,
+    disable_jit: bool = False,
 ) -> Dict[str, Dict[str, Any]]:
     """Evaluates given solutions to the specified challenge.
 
@@ -97,6 +98,9 @@ def evaluate_solutions_to_challenge(
         update_leaderboard: If `True`, the leaderboard is updated with the new
             evaluation results.
         print_results: If `True`, prints the evaluation results for each solution.
+        disable_jit: If `True`, the evaluation function will not be jit-compiled.
+            This results in slower evaluation in the case of multiple solutions, but
+            can reduce memory consumption.
 
     Returns:
         A dict containing the evaluation results, with keys being the solution path.
@@ -135,18 +139,16 @@ def evaluate_solutions_to_challenge(
     evaluation_results = {}
     with jax.default_device(jax.devices("cpu")[0]):
 
-        @jax.jit
         def evaluation_fn(params):
             response, aux = challenge.component.response(params)
             metrics = challenge.metrics(response=response, params=params, aux=aux)
             eval_metric = challenge.eval_metric(response)
             return eval_metric, metrics
 
-        print("Solutions to be evaluated:")
-        for p in solution_paths:
-            print(f"  {p}")
+        if not disable_jit:
+            evaluation_fn = jax.jit(evaluation_fn)
+
         for solution_path, solution in solutions.items():
-            print(f"evaluating: {solution_path=}")
             eval_metric, other_metrics = evaluation_fn(params=solution)
             minimum_width, minimum_spacing = compute_length_scale(solution)
             results = {
