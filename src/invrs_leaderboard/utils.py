@@ -135,7 +135,7 @@ def evaluate_solutions_to_challenge(
     evaluation_results = {}
     with jax.default_device(jax.devices("cpu")[0]):
 
-        @jax.jit
+        # @jax.jit
         def evaluation_fn(params):
             response, aux = challenge.component.response(params)
             metrics = challenge.metrics(response=response, params=params, aux=aux)
