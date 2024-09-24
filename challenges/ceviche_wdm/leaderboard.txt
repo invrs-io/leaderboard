@@ -1,0 +1,1 @@
+path=challenges/ceviche_wdm/solutions/220608_mfschubert_wdm_schubert_00.csv, eval_metric=0.15058755001967436, minimum_width=10.0, minimum_spacing=10.0, binarization_degree=1.0

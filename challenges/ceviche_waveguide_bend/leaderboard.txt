@@ -1,0 +1,1 @@
+path=challenges/ceviche_waveguide_bend/solutions/220608_mfschubert_waveguide_bend_schubert_00.csv, eval_metric=0.6547941354415114, minimum_width=10.0, minimum_spacing=10.0, binarization_degree=1.0
