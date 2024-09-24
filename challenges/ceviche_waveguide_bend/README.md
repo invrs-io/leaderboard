@@ -1,0 +1,1 @@
+- `220608_mfschubert_*` solutions are from [Inverse Design of Photonic Devices with Strict Foundry Fabrication Constraints](https://pubs.acs.org/doi/10.1021/acsphotonics.2c00313), uploaded by @mfschubert
