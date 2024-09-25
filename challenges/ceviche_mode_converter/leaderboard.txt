@@ -91,3 +91,4 @@ path=challenges/ceviche_mode_converter/solutions/230214_oskooi_converter_meep_mi
 path=challenges/ceviche_mode_converter/solutions/230214_oskooi_converter_meep_min_linewidth_70nm.csv, eval_metric=0.46178398063750414, minimum_width=8.0, minimum_spacing=7.0, binarization_degree=1.0
 path=challenges/ceviche_mode_converter/solutions/230214_oskooi_converter_meep_min_linewidth_80nm.csv, eval_metric=0.3160292618506372, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0
 path=challenges/ceviche_mode_converter/solutions/230214_oskooi_converter_meep_min_linewidth_90nm.csv, eval_metric=-0.2189795877080292, minimum_width=9.0, minimum_spacing=8.0, binarization_degree=1.0
+path=challenges/ceviche_mode_converter/solutions/240630_rahulkpadhy_mode_converter_Aadi_Rahul.csv, eval_metric=-0.6216409903779887, minimum_width=8.0, minimum_spacing=5.0, binarization_degree=1.0

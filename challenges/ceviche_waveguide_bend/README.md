@@ -1,1 +1,2 @@
 - `220608_mfschubert_*` solutions are from [Inverse Design of Photonic Devices with Strict Foundry Fabrication Constraints](https://pubs.acs.org/doi/10.1021/acsphotonics.2c00313), uploaded by @mfschubert
+- `240630_rahulkpadhy_*` solutions are from [PhoTOS: Topology Optimization of Photonic Components using a Shape Library](https://arxiv.org/abs/2407.00845) ([github repo](https://github.com/aadityacs/PhoTOS)), shared by @aadityacs and @rahulkpadhy
