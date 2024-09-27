@@ -1,1 +1,1 @@
-path=challenges/ceviche_beam_splitter/solutions/220608_mfschubert_beam_splitter_schubert_00.csv, eval_metric=0.08644460250388464, minimum_width=10.0, minimum_spacing=10.0, binarization_degree=1.0
+path=challenges/ceviche_beam_splitter/solutions/220608_mfschubert_beam_splitter_schubert_00.csv, eval_metric=0.10311357919443409, minimum_width=10.0, minimum_spacing=10.0, binarization_degree=1.0
