@@ -1,0 +1,1 @@
+path=challenges/ceviche_lightweight_wdm/solutions/230719_ferber_00.csv, eval_metric=-1.1323774302022689, minimum_width=2.0, minimum_spacing=1.0, binarization_degree=1.0
