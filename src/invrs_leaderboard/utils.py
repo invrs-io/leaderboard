@@ -12,6 +12,7 @@ import imageruler
 import jax
 import jax.numpy as jnp
 import numpy as onp
+from jax import tree_util
 from invrs_gym import challenges
 from invrs_gym.challenges.bayer import challenge as bayer_challenge
 from invrs_gym.challenges.diffract import metagrating_challenge, splitter_challenge
@@ -140,6 +141,9 @@ def evaluate_solutions_to_challenge(
     with jax.default_device(jax.devices("cpu")[0]):
 
         def evaluation_fn(params):
+            params = tree_util.tree_map(
+                lambda x: x.astype(jnp.promote_types(x.dtype, jnp.float64)), params
+            )
             response, aux = challenge.component.response(params)
             metrics = challenge.metrics(response=response, params=params, aux=aux)
             eval_metric = challenge.eval_metric(response)
@@ -150,6 +154,7 @@ def evaluate_solutions_to_challenge(
 
         for solution_path, solution in solutions.items():
             eval_metric, other_metrics = evaluation_fn(params=solution)
+            assert eval_metric.dtype == jnp.float64
             minimum_width, minimum_spacing = compute_length_scale(solution)
             results = {
                 "path": solution_path,
