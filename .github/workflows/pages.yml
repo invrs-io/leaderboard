@@ -25,11 +25,11 @@ jobs:
         run: |
             python -m pip install --upgrade pip
             pip install ".[tests,dev,docs]"
-            pip install "invrs-gym[docs]"
 
       - name: docs
         run: |
             git clone https://github.com/invrs-io/gym
+            pip install "gym/.[docs]"
             mkdir docs/notebooks/challenges
             mv gym/docs/notebooks/challenges/* docs/notebooks/challenges/
             mv gym/reference_designs/ .
