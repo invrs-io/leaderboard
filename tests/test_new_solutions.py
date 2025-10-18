@@ -1,6 +1,6 @@
 """Verification tests for new solutions added to the repo.
 
-Copyright (c) 2024 The INVRS-IO authors.
+Copyright (c) 2025 invrs.io LLC
 """
 
 import functools

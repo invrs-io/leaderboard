@@ -1,6 +1,6 @@
 """Utilities for loading leaderboard data.
 
-Copyright (c) 2024 The INVRS-IO authors.
+Copyright (c) 2025 invrs.io LLC
 """
 
 import glob
