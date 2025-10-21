@@ -1,1 +1,1 @@
-- `240413_mfschubert_*` solutions were submitted by @mfschubert.
+- `240413_mfschubert_*` solutions were submitted by @mfschubert

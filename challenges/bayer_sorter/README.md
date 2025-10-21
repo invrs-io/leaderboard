@@ -1,2 +1,2 @@
-- `240325_mfschubert_*` solutions were submitted by @mfschubert.
-- `240806_mfschubert_*` solutions were submitted by @mfschubert.
+- `240325_mfschubert_*` solutions were submitted by @mfschubert
+- `240806_mfschubert_*` solutions were submitted by @mfschubert
