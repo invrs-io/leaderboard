@@ -119,12 +119,44 @@ class VerifyLeaderboardTest(unittest.TestCase):
         self._test_new_submissions_have_correct_metrics("ceviche_mode_converter")
 
     @pytest.mark.slow
+    def test_ceviche_power_splitter(self):
+        self._test_new_submissions_have_correct_metrics("ceviche_power_splitter")
+
+    @pytest.mark.slow
     def test_ceviche_waveguide_bend(self):
         self._test_new_submissions_have_correct_metrics("ceviche_waveguide_bend")
 
     @pytest.mark.slow
     def test_ceviche_wdm(self):
         self._test_new_submissions_have_correct_metrics("ceviche_wdm")
+
+    @pytest.mark.slow
+    def test_ceviche_lightweight_beam_splitter(self):
+        self._test_new_submissions_have_correct_metrics(
+            "ceviche_lightweight_beam_splitter"
+        )
+
+    @pytest.mark.slow
+    def test_ceviche_lightweight_mode_converter(self):
+        self._test_new_submissions_have_correct_metrics(
+            "ceviche_lightweight_mode_converter"
+        )
+
+    @pytest.mark.slow
+    def test_ceviche_lightweight_power_splitter(self):
+        self._test_new_submissions_have_correct_metrics(
+            "ceviche_lightweight_power_splitter"
+        )
+
+    @pytest.mark.slow
+    def test_ceviche_lightweight_waveguide_bend(self):
+        self._test_new_submissions_have_correct_metrics(
+            "ceviche_lightweight_waveguide_bend"
+        )
+
+    @pytest.mark.slow
+    def test_ceviche_lightweight_wdm(self):
+        self._test_new_submissions_have_correct_metrics("ceviche_lightweight_wdm")
 
     @pytest.mark.slow
     def test_diffractive_splitter(self):

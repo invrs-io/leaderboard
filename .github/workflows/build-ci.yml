@@ -142,6 +142,7 @@ jobs:
       - name: Run Python tests
         run: |
           pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_beam_splitter --runslow -s
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_lightweight_beam_splitter --runslow -s
 
   leaderboard_ceviche_mode_converter:
     runs-on: ubuntu-latest
@@ -164,6 +165,30 @@ jobs:
       - name: Run Python tests
         run: |
           pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_mode_converter --runslow -s
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_lightweight_mode_converter --runslow -s
+
+  leaderboard_power_splitter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Setup environment
+        run: |
+            python -m pip install --upgrade pip
+            pip install ".[tests,dev]"
+
+      - name: Run Python tests
+        run: |
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_power_splitter --runslow -s
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_lightweight_power_splitter --runslow -s
 
   leaderboard_ceviche_waveguide_bend:
     runs-on: ubuntu-latest
@@ -186,6 +211,7 @@ jobs:
       - name: Run Python tests
         run: |
           pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_waveguide_bend --runslow -s
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_lightweight_waveguide_bend --runslow -s
 
   leaderboard_ceviche_wdm:
     runs-on: ubuntu-latest
@@ -208,6 +234,7 @@ jobs:
       - name: Run Python tests
         run: |
           pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_wdm --runslow -s
+          pytest tests/test_new_solutions.py::VerifyLeaderboardTest::test_ceviche_lightweight_wdm --runslow -s
 
   leaderboard_meta_atom_library:
     runs-on: ubuntu-latest
