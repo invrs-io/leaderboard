@@ -1,4 +1,3 @@
-path=challenges/ceviche_wdm/solutions/220608_mfschubert_wdm_schubert_00.csv, eval_metric=0.15058755001967436, minimum_width=10.0, minimum_spacing=10.0, binarization_degree=1.0
 path=challenges/ceviche_wdm/solutions/250902_riarrieta_wdm_l.csv, eval_metric=0.043767861062557395, minimum_width=11.0, minimum_spacing=13.0, binarization_degree=1.0
 path=challenges/ceviche_wdm/solutions/250902_riarrieta_wdm_m.csv, eval_metric=0.03607220508455551, minimum_width=7.0, minimum_spacing=6.0, binarization_degree=1.0
 path=challenges/ceviche_wdm/solutions/250902_riarrieta_wdm_s.csv, eval_metric=0.05394942057682108, minimum_width=4.0, minimum_spacing=4.0, binarization_degree=1.0
