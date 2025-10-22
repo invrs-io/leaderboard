@@ -1,4 +1,3 @@
-path=challenges/ceviche_beam_splitter/solutions/220608_mfschubert_beam_splitter_schubert_00.csv, eval_metric=0.10311357919443409, minimum_width=10.0, minimum_spacing=10.0, binarization_degree=1.0
 path=challenges/ceviche_beam_splitter/solutions/250902_riarrieta_beam_splitter_l.csv, eval_metric=-0.4571854730663239, minimum_width=11.0, minimum_spacing=14.0, binarization_degree=1.0
 path=challenges/ceviche_beam_splitter/solutions/250902_riarrieta_beam_splitter_m.csv, eval_metric=-0.5334178296123717, minimum_width=9.0, minimum_spacing=11.0, binarization_degree=1.0
 path=challenges/ceviche_beam_splitter/solutions/250902_riarrieta_beam_splitter_s.csv, eval_metric=-0.49371129254593243, minimum_width=4.0, minimum_spacing=5.0, binarization_degree=1.0

@@ -1,5 +1,3 @@
-path=challenges/ceviche_mode_converter/solutions/220608_mfschubert_converter_schubert_circle_x33491673_w307_s134.csv, eval_metric=0.6158198003769176, minimum_width=10.0, minimum_spacing=10.0, binarization_degree=1.0
-path=challenges/ceviche_mode_converter/solutions/220608_mfschubert_converter_schubert_notched_x33491673_w183_s159.csv, eval_metric=0.47224994292473155, minimum_width=9.0, minimum_spacing=9.0, binarization_degree=1.0
 path=challenges/ceviche_mode_converter/solutions/230115_ianwilliamson_converter_generator_circle_10_x47530832_w11_s483.csv, eval_metric=0.4331261809713524, minimum_width=10.0, minimum_spacing=10.0, binarization_degree=1.0
 path=challenges/ceviche_mode_converter/solutions/230115_ianwilliamson_converter_generator_circle_10_x47530832_w19_s483.csv, eval_metric=0.40881954786582714, minimum_width=10.0, minimum_spacing=10.0, binarization_degree=1.0
 path=challenges/ceviche_mode_converter/solutions/230115_ianwilliamson_converter_generator_circle_10_x47530832_w27_s681.csv, eval_metric=0.6197451800358537, minimum_width=10.0, minimum_spacing=10.0, binarization_degree=1.0
