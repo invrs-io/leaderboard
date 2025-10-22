@@ -20,10 +20,11 @@ If you generated solutions using your own implementation of a gym challenge, you
 
 ## How to contribute your solutions
 
+- Open source your solutions on your own GitHub repo, using MIT or similar license
 - Clone this repository
 - Install via `pip install .`
 - Add your solution to the appropriate directory, following the filename convention `challenges/{CHALLENGE_NAME}/solutions/{YYMMDD}_{GITHUB_USERNAME}_{ID}.json`. The `ID` may be any meaningful string of your choosing.
-- Modify the `README.md` in the challenge directory to include your submission. Please link any publication or code that is relevant.
+- Modify the `README.md` in the challenge directory to include your submission. Please link your GitHub repo, and feel free to link and any publication or code that is relevant.
 - Run `python scripts/eval.py`, which will detect new designs and add them to the appropriate leaderboard files
 - Run `python scripts/summary.py` which will regenerate the `challenges/README.md` including your submissions. Take care that the `README.md` associated with each challenge has been properly updated.
 - Submit a PR for review. A github action will re-run the evaluation of your designs and ensure they match the leaderboard updates.
