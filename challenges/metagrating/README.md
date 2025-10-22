@@ -1,4 +1,3 @@
 - `230803_jiaqui-jiang_*` solutions are the RCWA-generated designs from the [photonics-opt-testbed](https://github.com/NanoComp/photonics-opt-testbed/tree/main/Metagrating3D), created by @jiaqui-jiang and You Zhou
 - `230803_oskooi_*` solutions are the meep-generated designs from the [photonics-opt-testbed](https://github.com/NanoComp/photonics-opt-testbed/tree/main/Metagrating3D), created by @oskooi and @mawc2019
 - `240710_mfschubert_*` solutions were created by @mfschubert
-- `250827_smartalecH_SSP*` solutions are generated using the Subpixel-Smoothed Projection algorithm described in the paper, [Unifying and accelerating level-set and density-based topology optimization by subpixel-smoothed projection](https://doi.org/10.1364/OE.563512)

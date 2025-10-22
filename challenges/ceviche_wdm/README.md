@@ -1,1 +1,0 @@
-- `250902_riarrieta_*` solutions are from [Hyperparameter-free minimum-lengthscale constraints for topology optimization](https://arxiv.org/abs/2507.16108), shared by @riarrieta
